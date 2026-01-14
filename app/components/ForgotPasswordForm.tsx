@@ -82,13 +82,7 @@ export default function LoginForm() {
           </button>
         </form>
 
-        <div className="flex justify-center mt-5">
-          Don’t have an account?
-          <Link href="/signup" className="text-[#084040] hover:underline ml-1">
-            Create account
-          </Link>
-        </div>
-
+        
       </div>
     </div>
   );

@@ -1,36 +1,43 @@
-import Image from "next/image";
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AuthSidebar() {
   return (
-          <div className="relative hidden lg:block">
-            <Image
-              src="/cta-bg.jpg"
-              alt="Testimonial"
-              fill
-              className="object-cover"
-              priority
-            />
-    
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/30 z-10" />
-    
-            {/* Logo */}
-            <div className="absolute top-6 left-6 z-20 text-white font-semibold text-lg">
-              Nucleus
-            </div>
-    
-            {/* Quote */}
-            <div className="absolute bottom-10 left-8 right-8 z-20 text-white">
-              <p className="text-2xl font-semibold leading-snug">
-                “Simply all the tools that my team and I need.”
-              </p>
-              <p className="mt-4 text-sm opacity-90">
-                Karen Yue <br />
-                <span className="opacity-75">
-                  Director of Digital Marketing Technology
-                </span>
-              </p>
-            </div>
-          </div>
+    <div className="relative hidden lg:block">
+      <Image
+        src="/auth-bg1.jpg"
+        alt="Testimonial"
+        fill
+        className="object-cover"
+        priority
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50 z-10" />
+
+      <div className="absolute top-6 left-6 z-20 ">
+        <Link href="/" aria-label="Go to homepage">
+          <Image
+            className="dark:invert w-[220px] lg:w-[180px] h-auto"
+            src="/logo-white.svg"
+            alt="logo"
+            width={150}
+            height={38}
+            priority
+          />
+        </Link>
+      </div>
+
+      <div className="absolute bottom-25 left-8 right-8 z-20 text-white">
+        <h1 className="text-4xl lg:text-5xl font-black">
+          Because every penny counts.
+        </h1>
+        <p className="mt-3 text-sm opacity-75">
+          Compare live exchange rates from trusted providers in one place.
+        </p>
+      </div>
+    </div>
   );
 }

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { HiOutlineEye, HiOutlineEyeOff } from 'react-icons/hi';
 
-export default function LoginForm() {
+export default function SignupForm() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -83,9 +83,9 @@ export default function LoginForm() {
         </form>
 
         <div className="flex justify-center mt-5">
-          Don’t have an account?
+          Already have an account?
           <Link href="/signup" className="text-[#084040] hover:underline ml-1">
-            Create account
+            Log in
           </Link>
         </div>
 
