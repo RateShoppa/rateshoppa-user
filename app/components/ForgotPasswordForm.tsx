@@ -1,12 +1,9 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { HiOutlineEye, HiOutlineEyeOff } from 'react-icons/hi';
 
-export default function LoginForm() {
-  const [showPassword, setShowPassword] = useState(false);
+export default function ForgotPasswordForm() {
 
   return (
     <div className="flex flex-col justify-center px-8 sm:px-14 py-12 bg-white w-full">
