@@ -27,10 +27,10 @@ export default function LoginForm() {
         </div>
 
         <h1 className="text-4xl font-semibold text-gray-900">
-          Welcome back
+          Forgot your password?
         </h1>
         <p className="mt-2 text-sm text-gray-500">
-          Log in to access the latest exchange rates and keep more of your money.
+          Enter your email address and we’ll send you a secure reset link.
         </p>
 
         <form className="mt-8 space-y-5">
@@ -45,42 +45,17 @@ export default function LoginForm() {
             />
           </div>
 
-          {/* Password with toggle */}
-          <div>
-            <label className="block text-sm text-gray-600 mb-1">
-              Password
-            </label>
-
-            <div className="relative">
-              <input
-                type={showPassword ? "text" : "password"}
-                className="w-full rounded-lg border px-4 py-3 pr-12 focus:ring-1 focus:ring-[#084040]"
-              />
-
-              <button
-                type="button"
-                aria-label={showPassword ? "Hide password" : "Show password"}
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute inset-y-0 right-3 flex items-center text-gray-400 hover:text-gray-600"
-              >
-                {showPassword ? <HiOutlineEyeOff size={20} /> : <HiOutlineEye size={20} />}
-
-              </button>
-            </div>
-          </div>
-
-          {/* Forgot password */}
-          <div className="flex justify-end text-sm">
-            <Link href="/forgot-password" className="text-[#084040] hover:underline">
-              Forgot password?
-            </Link>
-          </div>
-
           {/* Submit */}
-          <button className="w-full py-3 font-semibold bg-[#084040] text-[#B6EA25] rounded hover:bg-[#96c80e] hover:text-[#084040] transition">
-            Log in
+          <button className="w-full py-3 mt-1 font-semibold bg-[#084040] text-[#B6EA25] rounded-lg hover:bg-[#96c80e] hover:text-[#084040] transition">
+            Reset Password
           </button>
         </form>
+
+        <div className="flex justify-center mt-5">
+          <Link href="/login" className="text-[#084040] hover:underline ml-1">
+            Return to Log in
+          </Link>
+        </div>
 
         
       </div>

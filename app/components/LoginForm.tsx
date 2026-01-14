@@ -77,7 +77,7 @@ export default function LoginForm() {
           </div>
 
           {/* Submit */}
-          <button className="w-full py-3 font-semibold bg-[#084040] text-[#B6EA25] rounded hover:bg-[#96c80e] hover:text-[#084040] transition">
+          <button className="w-full py-3 font-semibold bg-[#084040] text-[#B6EA25] rounded-lg hover:bg-[#96c80e] hover:text-[#084040] transition">
             Log in
           </button>
         </form>

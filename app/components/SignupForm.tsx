@@ -27,13 +27,35 @@ export default function SignupForm() {
         </div>
 
         <h1 className="text-4xl font-semibold text-gray-900">
-          Welcome back
+          Join Rateshoppa
         </h1>
         <p className="mt-2 text-sm text-gray-500">
-          Log in to access the latest exchange rates and keep more of your money.
+          Create a free account to compare live exchange rates from trusted providers.
         </p>
 
         <form className="mt-8 space-y-5">
+          {/* First Name */}
+          <div>
+            <label className="block text-sm text-gray-600 mb-1">
+              First Name
+            </label>
+            <input
+              type="text"
+            className="w-full rounded-lg border px-4 py-3 focus:ring-1 focus:ring-[#084040]"
+            />
+          </div>
+
+          {/* Last Name */}
+          <div>
+            <label className="block text-sm text-gray-600 mb-1">
+              Last Name
+            </label>
+            <input
+              type="text"
+            className="w-full rounded-lg border px-4 py-3 focus:ring-1 focus:ring-[#084040]"
+            />
+          </div>
+
           {/* Email */}
           <div>
             <label className="block text-sm text-gray-600 mb-1">
@@ -69,22 +91,15 @@ export default function SignupForm() {
             </div>
           </div>
 
-          {/* Forgot password */}
-          <div className="flex justify-end text-sm">
-            <Link href="/forgot-password" className="text-[#084040] hover:underline">
-              Forgot password?
-            </Link>
-          </div>
-
           {/* Submit */}
-          <button className="w-full py-3 font-semibold bg-[#084040] text-[#B6EA25] rounded hover:bg-[#96c80e] hover:text-[#084040] transition">
-            Log in
+          <button className="w-full py-3 mt-1 font-semibold bg-[#084040] text-[#B6EA25] rounded-lg hover:bg-[#96c80e] hover:text-[#084040] transition">
+            Create Account
           </button>
         </form>
 
         <div className="flex justify-center mt-5">
           Already have an account?
-          <Link href="/signup" className="text-[#084040] hover:underline ml-1">
+          <Link href="/login" className="text-[#084040] hover:underline ml-1">
             Log in
           </Link>
         </div>
