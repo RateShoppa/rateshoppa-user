@@ -1,12 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { HiOutlineEye, HiOutlineEyeOff } from 'react-icons/hi';
 
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
 
   return (
     <div className="flex flex-col justify-center px-8 sm:px-14 py-12 bg-white w-full">
@@ -41,7 +43,7 @@ export default function LoginForm() {
             </label>
             <input
               type="email"
-            className="w-full rounded-lg border px-4 py-3 focus:ring-1 focus:ring-[#084040]"
+              className="w-full rounded-lg border px-4 py-3 focus:ring-1 focus:ring-[#084040]"
             />
           </div>
 
@@ -63,8 +65,9 @@ export default function LoginForm() {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute inset-y-0 right-3 flex items-center text-gray-400 hover:text-gray-600"
               >
-                {showPassword ? <HiOutlineEyeOff size={20} /> : <HiOutlineEye size={20} />}
-
+                {showPassword
+                  ? <HiOutlineEyeOff size={20} />
+                  : <HiOutlineEye size={20} />}
               </button>
             </div>
           </div>
@@ -76,8 +79,12 @@ export default function LoginForm() {
             </Link>
           </div>
 
-          {/* Submit */}
-          <button className="w-full py-3 font-semibold bg-[#084040] text-[#B6EA25] rounded-lg hover:bg-[#96c80e] hover:text-[#084040] transition">
+          {/* Log in button (applied as requested) */}
+          <button
+            type="button"
+            onClick={() => router.push("/dashboard")}
+            className="w-full py-3 font-semibold bg-[#084040] text-[#B6EA25] rounded-lg hover:bg-[#96c80e] hover:text-[#084040] transition"
+          >
             Log in
           </button>
         </form>
